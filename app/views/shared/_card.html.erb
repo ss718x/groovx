@@ -1,0 +1,13 @@
+<div class="card mb-4 shadow-sm rounded" style="<%= local_assigns[:style] %>">
+  <% if local_assigns[:image] %>
+    <img src="<%= image %>" class="card-img-top rounded-top" alt="...">
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= local_assigns[:title] %></h5>
+    <p class="card-tag"><%= local_assigns[:tag] %></p>
+    <p class="card-description"><%= local_assigns[:description] %></p>
+    <% if local_assigns[:link] %>
+      <%= link_to 'Go somewhere', link, class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

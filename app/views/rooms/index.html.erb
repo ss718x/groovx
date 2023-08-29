@@ -1,1 +1,12 @@
-<h2>rooms</h2>
+<div class="row">
+  <% @rooms.each do |room| %>
+     <div class="col-md-3">
+      <%= render 'shared/card',
+          title: room.name,
+          tag: room.tag,
+          description: room.description,
+          image: room.image_url,
+          link: room_path(room.id) %>
+    </div>
+  <% end %>
+</div>
