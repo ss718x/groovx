@@ -22,8 +22,12 @@ body {
 }
 
 .nav-link {
-  background-color: #191414;
+  background-color: #000000;
   color: #FFFFFF;
+}
+
+.nav-link:hover {
+  color: #1DB954;
 }
 
 .btn {
