@@ -44,7 +44,7 @@ album_covers = [
 room_names = [
   "PUNK RAWK!",
   "Classic Rock Haus",
-  "DarkDance Hall",
+  "Dark Dance Halls",
   "Metal Mania",
   "BLUES BAYOU",
   "straight from da streetz",
