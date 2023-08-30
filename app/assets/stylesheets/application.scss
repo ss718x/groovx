@@ -10,3 +10,39 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #191414;
+  color: #FFFFFF;
+}
+
+.navbar {
+  background-color: #191414;
+  color: #FFFFFF;
+}
+
+.nav-link {
+  background-color: #191414;
+  color: #FFFFFF;
+}
+
+.btn {
+  background-color: #1DB954;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.custom-rounded {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+// .image-rounded-top {
+//   border-top-left-radius: 30px;
+//   border-top-right-radius: 30px;
+// }
+
+.card-body {
+  background-color: #191414;
+  color: #FFFFFF;
+}
