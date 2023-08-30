@@ -37,12 +37,43 @@ body {
   overflow: hidden;
 }
 
-// .image-rounded-top {
-//   border-top-left-radius: 30px;
-//   border-top-right-radius: 30px;
-// }
-
 .card-body {
   background-color: #191414;
   color: #FFFFFF;
+}
+
+.custom-card {
+  text-decoration: none;
+  color: inherit;
+
+  .card {
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; // Adjust as per your needs
+  }
+
+  .image-container {
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+
+    img.card-img-top {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .overlay-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+  }
 }
