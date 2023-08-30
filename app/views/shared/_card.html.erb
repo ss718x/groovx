@@ -1,12 +1,20 @@
-<%= link_to (local_assigns[:link] || '#'), class: 'stretched-link', style: 'display: block; text-decoration: none; color: inherit;' do %>
-  <div class="card mb-4 shadow-sm custom-rounded" style="<%= local_assigns[:style] %>">
+<a href="<%= local_assigns[:link] || '#' %>" class="custom-card">
+  <div class="card custom-rounded">
     <% if local_assigns[:image] %>
-      <img src="<%= local_assigns[:image] %>" class="card-img-top image-rounded-top" alt="...">
+      <div class="image-container">
+        <img src="<%= local_assigns[:image] %>" class="card-img-top image-rounded-top" alt="...">
+        <!-- Name over the image -->
+        <div class="overlay-title">
+          <%= local_assigns[:title] %>
+        </div>
+      </div>
     <% end %>
-    <div class="card-body">
-      <h5 class="card-title"><%= local_assigns[:title] %></h5>
-      <p class="card-tag"><%= local_assigns[:tag] %></p>
-      <p class="card-description"><%= local_assigns[:description] %></p>
+    <div class="card-body room-description">
+      <span>Listeners:</span> <%= rand(0..10) %> <!-- placeholder; info will come from room -->
+      <span>DJs:</span> <%= rand(0..10) %> <!-- placeholder; info will come from room -->
+      <span class="max-djs">Max DJs:</span> <%= local_assigns[:max_djs] %>
+      <br>
+      <span class="genre-description">Genre:</span> <%= local_assigns[:description] %>
     </div>
   </div>
-<% end %>
+</a>

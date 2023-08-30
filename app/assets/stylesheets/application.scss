@@ -37,12 +37,75 @@ body {
   overflow: hidden;
 }
 
-// .image-rounded-top {
-//   border-top-left-radius: 30px;
-//   border-top-right-radius: 30px;
-// }
-
 .card-body {
   background-color: #191414;
   color: #FFFFFF;
+  height: 150px;
+  overflow: hidden
+}
+
+.custom-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 3s ease, box-shadow 0.3s ease;
+
+  .card {
+    margin-bottom: 4rem;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    border: 1px solid #1DB954;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .image-container {
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5); // This adds a 50% opaque black overlay
+      z-index: 1;  // This makes sure the overlay is on top of the image but below the text
+    }
+
+    img.card-img-top {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+  }
+
+  .overlay-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    z-index: 3;
+  }
+}
+
+.card-body.room-description span {
+  font-weight: bold;
+}
+
+.card-body.room-description .max-djs {
+  margin-bottom: 50px;
 }

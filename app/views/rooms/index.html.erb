@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row m-5">
   <% @rooms.each do |room| %>
      <div class="col-md-3">
       <%= render 'shared/card',
           title: room.name,
-          tag: room.tag,
+          max_djs: room.max_djs,
           description: room.description,
           image: room.image_url,
           link: room_path(room.id) %>
