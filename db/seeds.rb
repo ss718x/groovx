@@ -30,7 +30,7 @@ users = User.all
     name: Faker::Lorem.words(number: 2).join(' '),
     tag: Faker::Lorem.words(number: 1).first,
     description: Faker::Lorem.sentences(number: 1).first,
-    image_url: Faker::LoremFlickr.image(size: "200x200", search_terms: ['room']),
+    image_url: "https://source.unsplash.com/200x200/?music",
     creator: creator
   )
   other_users = users.to_a - [creator]

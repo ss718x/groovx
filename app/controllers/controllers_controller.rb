@@ -58,13 +58,13 @@ class ControllersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_controller
-      @controller = Controller.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_controller
+    @controller = Controller.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def controller_params
-      params.require(:controller).permit(:rooms)
-    end
+  # Only allow a list of trusted parameters through.
+  def controller_params
+    params.require(:controller).permit(:rooms)
+  end
 end
