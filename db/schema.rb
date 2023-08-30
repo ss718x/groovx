@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_29_041714) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_30_060657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_041714) do
     t.string "tag"
     t.text "description"
     t.string "image_url"
+    t.integer "max_djs"
   end
 
   create_table "rooms_users", force: :cascade do |t|

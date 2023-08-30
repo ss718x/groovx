@@ -40,16 +40,25 @@ body {
 .card-body {
   background-color: #191414;
   color: #FFFFFF;
+  height: 150px; /* Or whatever height fits your design */
+  overflow-y: auto;  /* Add a vertical scrollbar if content exceeds max-height */
+}
+
+.custom-card .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2), 0 5px 15px rgba(255, 255, 255, 0.5);
 }
 
 .custom-card {
   text-decoration: none;
   color: inherit;
+  transition: transform 3s ease, box-shadow 0.3s ease;
 
   .card {
     margin-bottom: 4rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 15px; // Adjust as per your needs
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1), 0 3px 6px rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    border: 1px solid #1DB954;
   }
 
   .image-container {
@@ -76,4 +85,12 @@ body {
     font-size: 24px;
     text-align: center;
   }
+}
+
+.card-body.room-description span {
+  font-weight: bold;
+}
+
+.card-body.room-description .max-djs {
+  margin-bottom: 50px;
 }
