@@ -9,6 +9,7 @@ require 'faker'
 
 User.destroy_all
 Room.destroy_all
+RoomsUser.destroy_all
 
 user = User.find_or_create_by(email: 'user@me.com') do |user|
   user.password = '00000000'
@@ -74,5 +75,7 @@ descriptions = [
     creator: creator
   )
   other_users = users.to_a - [creator]
-  room.users << other_users.sample(rand(1..5))
+  room.djs << other_users.sample(rand(1..5))
 end
+
+# RoomsUser.new(user: user, room: Room.last)
