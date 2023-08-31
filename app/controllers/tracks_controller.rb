@@ -3,7 +3,9 @@ class TracksController < ApplicationController
   end
 
   def search
-    @tracks = RSpotify::Track.search(params[:query])
+    query = params[:query]
+    puts "Received query: #{query}"
+    @tracks = RSpotify::Track.search(query) if query.present?
   end
 
   def callback
