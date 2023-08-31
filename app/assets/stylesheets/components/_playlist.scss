@@ -1,0 +1,29 @@
+// /room/show style
+.playlist-card {
+  height: 100px;
+  width: 100%;  // this ensures it takes up the full width of its parent
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(71, 70, 70, 0.1); // optional, if you want a shadow effect
+
+  // This ensures there's space between the cards. Adjust as needed.
+  margin-bottom: 1px;
+
+  // optional, if you want a background color or other styling
+  background-color: #000000;
+}
+
+/* Remove margin from the last card */
+.playlist-card:last-child {
+  margin-bottom: 0;
+}
+
+.playlist-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.playlist-container::-webkit-scrollbar {
+  display: none;
+}
