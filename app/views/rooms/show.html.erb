@@ -1,18 +1,33 @@
-<div class="container-fluid d-flex m-0 p-0" style="height: 100vh;">
-  <div class="row flex-fill">
+<div class="container-fluid d-flex m-0 p-0" style="height: calc(100vh - 58px);">
 
-    <div class="playlist-container col-3">
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
-     <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+  <!-- playlist -->
+    <div class="playlist-container col-3" style="height: 100%;">
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
+      <div class="playlist-card d-flex justify-content-center align-items-center">playlist item</div>
     </div>
 
-    <div class="col-9">all the rest</div>
+  <!-- right panel container -->
+  <div class="right-panel d-flex flex-grow col-9 flex-column">
+
+    <!-- player and list of currently active djs -->
+    <div class="player-and-djs-container border d-flex flex-column" style="height: 250px; width: 100%;">
+        <div class="player" style="height: 60%;">player</div>
+        <div class="current-djs border" style="height: 40%;">djs</div>
+    </div>
+
+    <!-- chat and chat member list -->
+    <div class="chat-container d-flex border" style="height: 100%; width: 100%;">
+      <div class="chatbox col-9 border" style="height: 100%">chatbox</div>
+      <div class="chat-list col-3 border">chatters</div>
+    </div>
+
   </div>
+
 </div>
