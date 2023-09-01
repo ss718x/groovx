@@ -5,7 +5,9 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
-    @djs = @room.djs
+    @djs = @room.djs.order(created_at: :desc)
+    @user = current_user
+    @rooms_user = RoomsUser.new
   end
 
   def new

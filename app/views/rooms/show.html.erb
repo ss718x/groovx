@@ -8,7 +8,7 @@
     <!-- player and list of currently active djs -->
     <div class="player-and-djs-container border d-flex flex-column justify-content-between" style="height: 250px; width: 100%;">
         <div class="player p-1" style="height: 60%;">player</div>
-        <%= render "room/djqueue", djs: @djs %>
+        <%= render "room/djqueue", djs: @djs, room: @room %>
     </div>
 
     <!-- chat and chat member list -->
@@ -16,7 +16,5 @@
       <div class="chatbox col-9 border" style="height: 100%">chatbox</div>
       <div class="chat-list col-3 border">chatters</div>
     </div>
-
   </div>
-
 </div>

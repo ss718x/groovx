@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :create]
 
-  resources :rooms
+  resources :rooms do
+    resources :rooms_users, only: [:create, :destroy]
+  end
 
   resources :tracks, only: [:index] do
     collection do
@@ -13,4 +15,6 @@ Rails.application.routes.draw do
   end
 
   get '/callback', to: 'tracks#callback'
+
+  # post '/room/:room_id/rooms_user', to: 'rooms_user#create', as: "add"
 end
