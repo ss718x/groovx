@@ -12,7 +12,7 @@
   <% if @user.in?(@djs) %>
     <%= button_to "Step Down", room_rooms_user_path(room), method: :delete, class: "btn" %>
   <% else %>
-    <%= button_to "Step Up", "/rooms/#{room.id}/rooms_users", method: :post, class: "btn" %>
+    <%= button_to "Step Up", "/rooms/#{room.id}/rooms_users", method: :post, class: "btn btn-stepdown" %>
   <% end %>
 
 </div>

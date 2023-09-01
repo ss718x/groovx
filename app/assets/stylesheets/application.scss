@@ -32,10 +32,17 @@ body {
 }
 
 .btn {
+  background-color: red;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.btn-stepdown {
   background-color: #1DB954;
   color: #FFFFFF;
   border-radius: 10px;
 }
+
 
 .custom-rounded {
   border-radius: 10px;
@@ -140,5 +147,3 @@ body {
   padding: 20px 0;
   margin-top: 20px;
 }
-
-
