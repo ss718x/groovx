@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :tracks, only: [:index] do
     collection do
-      get :search
+      post :search
     end
   end
 
