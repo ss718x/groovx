@@ -27,3 +27,36 @@
 .playlist-container::-webkit-scrollbar {
   display: none;
 }
+
+// room queue + search tabs
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid white;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.tab.active {
+  background-color: #000000;
+}
+
+.tab:hover {
+  background-color: #1DB954;
+}
