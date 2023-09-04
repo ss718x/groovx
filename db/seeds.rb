@@ -14,7 +14,7 @@ RoomsUser.destroy_all
 user = User.find_or_create_by(email: 'user@me.com') do |user|
   user.password = '00000000'
   user.password_confirmation = '00000000'
-  user.name = 'admin'
+  user.name = 'Sebastian'
 end
 
 10.times do
