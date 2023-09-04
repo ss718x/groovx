@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :create]
 
   resources :rooms do
-    resources :rooms_users, only: [:create, :destroy]
+    resources :rooms_users, only: [:create, :destroy, :edit]
   end
 
   resources :tracks, only: [:index] do
