@@ -44,6 +44,11 @@ class RoomsController < ApplicationController
     redirect_to rooms_url, notice: 'Room was successfully deleted.'
   end
 
+  def my_rooms
+    @user = current_user
+    @user_rooms = @user.created_rooms || []  # Initialize @user_rooms to an empty array if it's nil
+  end
+
   private
 
   def room_params

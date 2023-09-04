@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :messages, only: :show
 
   get '/callback', to: 'tracks#callback'
+  get '/my_rooms', to: 'rooms#my_rooms', as: 'my_rooms'
 
   # post '/room/:room_id/rooms_user', to: 'rooms_user#create', as: "add"
 end
