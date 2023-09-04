@@ -8,6 +8,8 @@ class RoomsController < ApplicationController
     @djs = @room.djs.order(created_at: :desc)
     @user = current_user
     @rooms_user = RoomsUser.new
+    @messages = Message.all
+    @message = Message.new
   end
 
   def new

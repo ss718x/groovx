@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :rooms do
     resources :rooms_users, only: [:create, :destroy, :edit]
+    resources :messages, only: :create
   end
 
   resources :tracks, only: [:index] do
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
       post :search
     end
   end
+
+  resources :messages, only: :show
 
   get '/callback', to: 'tracks#callback'
 
