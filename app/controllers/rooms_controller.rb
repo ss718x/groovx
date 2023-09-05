@@ -44,7 +44,7 @@ class RoomsController < ApplicationController
 
   def my_rooms
     @user = current_user
-    @user_rooms = @user.created_rooms || []  # Initialize @user_rooms to an empty array if it's nil
+    @user_rooms = @user.created_rooms || []
   end
 
   private
