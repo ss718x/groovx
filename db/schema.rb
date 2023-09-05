@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_05_044549) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_05_075846) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,6 +67,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_044549) do
     t.string "image_url"
     t.integer "max_djs"
     t.bigint "user_id"
+    t.string "genre"
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 

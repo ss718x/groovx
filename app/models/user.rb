@@ -7,5 +7,7 @@ class User < ApplicationRecord
   # has_and_belongs_to_many :rooms
   has_many :rooms, dependent: :destroy
   has_many :rooms_user
+  has_many :created_rooms, class_name: 'Room', foreign_key: 'user_id'
   has_one_attached :avatar
+  attr_accessor :genre
 end
