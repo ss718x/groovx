@@ -66,16 +66,16 @@ descriptions = [
 ]
 
 8.times do |i|
-  creator = users.sample
+  user = users.sample
   room = Room.create(
     name: room_names[i],
     tag: Faker::Lorem.words(number: 1).first,
     description: descriptions[i],
     max_djs: rand(1..10),
     image_url: album_covers[i],
-    creator: creator
+    user: user
   )
-  other_users = users.to_a - [creator]
+  other_users = users.to_a - [user]
   room.djs << other_users.sample(rand(1..5))
 end
 

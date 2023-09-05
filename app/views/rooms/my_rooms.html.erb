@@ -1,7 +1,7 @@
 <h1 class="text-center my-3">My Rooms</h1>
-<% if @user_rooms.any? %>
+<% if current_user.rooms.any? %>
   <ul>
-    <% @user_rooms.each do |room| %>
+    <% current_user.rooms.each do |room| %>
       <li><%= room.name %></li>
       <!-- Display other room information as needed -->
     <% end %>
@@ -10,4 +10,3 @@
   <p class="text-center my-5">You haven't created any room yet.</p>
   <p class="text-center my-5"><a href="<%= new_room_path %>">Create a new room</a></p>
 <% end %>
-
