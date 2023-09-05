@@ -1,7 +1,7 @@
 <h1 class="text-center my-3">My Rooms</h1>
-<% if @user_rooms.any? %>
+<% if current_user.rooms.any? %>
   <ul>
-    <% @user_rooms.each do |room| %>
+    <% current_user.rooms.each do |room| %>
       <li><%= room.name %></li>
     <% end %>
   </ul>

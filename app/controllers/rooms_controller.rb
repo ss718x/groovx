@@ -45,13 +45,11 @@ class RoomsController < ApplicationController
   end
 
   def my_rooms
-    @user = current_user
-    @user_rooms = @user.created_rooms || []
   end
 
   private
 
   def room_params
-    params.require(:room).permit(:name, :max_djs, :description, :creator_id)
+    params.require(:room).permit(:name, :max_djs, :description, :user_id)
   end
 end
