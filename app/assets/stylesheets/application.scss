@@ -14,7 +14,7 @@
 body {
   background-color: #191414;
   color: #FFFFFF;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .navbar {
@@ -146,4 +146,41 @@ body {
 .footer {
   padding: 20px 0;
   margin-top: 20px;
+}
+
+// chatbox styling
+
+.messages-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  // justify-content: space-between;
+  height: 100%; /* Set the desired height for the container */
+  overflow-y: auto;
+  max-height: calc(100% - 40px);
+}
+
+.message-input-container {
+  margin-top: auto; /* Push the input container to the bottom */
+  width: 100%;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-and-djs-container {
+  flex-shrink: 0;  /* This ensures it doesn't shrink beyond its content */
+}
+
+.chat-container {
+  flex-grow: 1;    /* This ensures it takes up the remaining space */
+  overflow-y: hidden; /* Allows scrolling within the chat if content overflows */
+}
+
+.chatlist {
+  flex-shrink: 0; /* don't let it shrink */
+  overflow-y: hidden; /* in case the member list exceeds the box's height */
+  // width: ...; /* you can define a width if needed */
 }

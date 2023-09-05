@@ -2,7 +2,6 @@
   <% if tracks %>
     <% tracks.each do |track| %>
       <div class="track">
-
         <iframe class="spotify-player" src="https://open.spotify.com/embed/track/<%= track.id %>" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     <% end %>
