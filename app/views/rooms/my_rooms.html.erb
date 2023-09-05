@@ -1,10 +1,19 @@
 <h1 class="text-center my-3">My Rooms</h1>
+
 <% if current_user.rooms.any? %>
-  <ul>
+  <div class="row m-5">
     <% current_user.rooms.each do |room| %>
-      <li><%= room.name %></li>
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title"><%= room.name %></h5>
+            <p class="card-text">Max DJs: <%= room.max_djs %></p>
+            <p class="card-text">Genre: <%= room.genre %></p>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 <% else %>
   <p class="text-center my-5">You haven't created any room yet.</p>
   <p class="text-center my-5"><a href="<%= new_room_path %>">Create a new room</a></p>
