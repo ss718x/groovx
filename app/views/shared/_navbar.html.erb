@@ -23,7 +23,7 @@
           <li class="nav-item dropdown">
           <a href="#" class="avatar mx-3" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if current_user.avatar? %>
-              <%= cl_image_tag current_user.avatar.key, crop: :fill, class: "avatar" %>
+              <%= cl_image_tag current_user.avatar.key, crop: :fill, class: "avatar rounded-circle", style: "position: relative; width: 60px; height: 60px; border: 2px solid #1DB954;" %>
             <% else %>
               <%= image_tag 'default_avatar.jpg', crop: :fill, class: "avatar" %>
             <% end %>

@@ -11,41 +11,49 @@ require 'open-uri'
 User.destroy_all
 Room.destroy_all
 RoomsUser.destroy_all
-# Message.destroy_all
-
-file = URI.open("https://images.unsplash.com/photo-1527980965255-d3b416303d12")
-
-
-user = User.find_or_create_by(email: 'user@me.com') do |user|
-  user.password = '000000'
-  user.password_confirmation = '000000'
-  user.name = 'Sebastian'
-end
-
-user.avatar.attach(io: file, filename: "me.png", content_type: "image/png")
+Message.destroy_all
+puts "Everything destroyed"
 
 file1 = URI.open("https://images.unsplash.com/photo-1524638431109-93d95c968f03")
 file2 = URI.open("https://images.unsplash.com/photo-1633332755192-727a05c4013d")
 file3 = URI.open("https://images.unsplash.com/photo-1438761681033-6461ffad8d80")
 file4 = URI.open("https://images.unsplash.com/photo-1645378999488-63138abdecd2")
 file5 = URI.open("https://images.unsplash.com/photo-1645378999496-33c8c2afe38d")
-file6 = URI.open("https://images.unsplash.com/photo-1645378999013-95abebf5f3c1")
-file7 = URI.open("https://images.unsplash.com/photo-1486486704382-8ee6f7754a45")
-file8 = URI.open("https://images.unsplash.com/photo-1521038199265-bc482db0f923")
-file9 = URI.open("https://images.unsplash.com/photo-1563351672-62b74891a28a")
-file10 = URI.open("https://images.unsplash.com/photo-1579192181049-2aa87e49df2a")
+file6 = URI.open("https://images.unsplash.com/photo-1486486704382-8ee6f7754a45")
+file7 = URI.open("https://images.unsplash.com/photo-1645378999496-33c8c2afe38d")
+file8 = URI.open("https://images.unsplash.com/photo-1486486704382-8ee6f7754a45")
+file9 = URI.open("https://images.unsplash.com/photo-1521038199265-bc482db0f923")
+file10 = URI.open("https://images.unsplash.com/photo-1563351672-62b74891a28a")
 
-avatars = [file1, file2, file3, file4, file5, file6, file7, file8, file9, file10]
+emails = ['user1@me.com', 'user2@me.com', 'user3@me.com', 'user4@me.com', 'user5@me.com',
+          'user6@me.com', 'user7@me.com', 'user8@me.com', 'user9@me.com', 'user10@me.com']
 
-10.times do |i|
-  User.create!(
-    email: Faker::Internet.unique.email,
-    password: 'password123',
-    password_confirmation: 'password123',
-    name: Faker::Name.name
-  )
-  user.avatar.attach(io: avatars[i].open, filename: "avatar_#{i}.png", content_type: "image/png")
+names = ["Denisa", "Steve", "Amber", "Ryan", "Ethan", "Jenny", "Chloe", "Kelly", "Maria", "Sophie"]
+
+files = [file1, file2, file3, file4, file5, file6, file7, file8, file9, file10]
+
+emails.each_with_index do |email, index|
+  user = User.find_or_create_by(email: email) do |u|
+    u.password = '000000'
+    u.password_confirmation = '000000'
+    u.name = names[index]
+  end
+
+  user.avatar.attach(io: files[index], filename: "user#{index + 1}.png", content_type: "image/png")
+  puts "User #{index + 1} Created"
 end
+
+# avatars = [file1, file2, file3, file4, file5, file6, file7, file8, file9, file10]
+
+# 10.times do |i|
+#   User.create!(
+#     email: Faker::Internet.unique.email,
+#     password: 'password123',
+#     password_confirmation: 'password123',
+#     name: Faker::Name.first_name,
+#     avatar.attach(io: avatars.sample, filename: "avatar_#{i}.png", content_type: "image/png")
+#   )
+# end
 
 users = User.all
 
@@ -85,6 +93,7 @@ descriptions = [
   "snap your fingers to the beat"
 ]
 
+puts "Creating Rooms"
 8.times do |i|
   user = users.sample
   room = Room.create(
@@ -98,5 +107,6 @@ descriptions = [
   other_users = users.to_a - [user]
   room.djs << other_users.sample(rand(1..5))
 end
+puts "Rooms Created!"
 
 # RoomsUser.new(user: user, room: Room.last)

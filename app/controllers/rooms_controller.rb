@@ -5,10 +5,10 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
-    @djs = @room.djs.order(created_at: :desc)
+    @djs = @room.djs
     @user = current_user
     @rooms_user = RoomsUser.new
-    @messages = @room.message.order(created_at: :asc)
+    @messages = @room.messages.order(created_at: :asc)
     @message = Message.new
   end
 

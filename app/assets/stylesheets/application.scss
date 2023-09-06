@@ -189,3 +189,9 @@ body {
   padding: 40px;
   padding-left: 0px;
 }
+
+.avatar {
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;  /* Ensures the image isn't stretched */
+  overflow: hidden;   /* Ensures any part of the image outside the circle is hidden */
+}
