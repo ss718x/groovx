@@ -195,3 +195,39 @@ body {
   object-fit: cover;  /* Ensures the image isn't stretched */
   overflow: hidden;   /* Ensures any part of the image outside the circle is hidden */
 }
+
+/* Style for the chatlist container */
+.container.chatlist {
+  width: 275px; /* Adjust the width as needed */
+  margin: 0;
+  padding: 10px;
+  background-color: #000000; /* Background color */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Style for the list of chatters */
+.container.chatlist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container.chatlist li {
+  font-size: 16px; /* Adjust the font size as needed */
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 0px; /* Spacing between list items */
+  color: #ffffff; /* Text color */
+  display: inline-block;
+}
+
+.container.chatlist li:last-child {
+  margin-bottom: 0; /* Remove spacing after the last item */
+}
+
+/* Hover effect for list items (optional) */
+.container.chatlist li:hover {
+  background-color: #1DB954; /* Background color on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+}

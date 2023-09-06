@@ -57,9 +57,9 @@
           <% end %>
         </div>
       </div>
-      <div class="container chatlist" style="width: 100px; margin: 0;">
+      <div class="container chatlist">
         <% @room.rooms_users.each do |room_user| %>
-          <ul style="list-style-type: none; padding-left: 0;">
+          <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
             <li><%= room_user.user.name.split.first %></li>
           </ul>
         <% end %>
