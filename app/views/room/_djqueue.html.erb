@@ -5,7 +5,6 @@
           <%= cl_image_tag dj.avatar.key, crop: :fill, class: "avatar rounded-circle p-0 d-flex align-items-center justify-content-center mx-2", style: "position: relative; width: 60px; height: 60px; border: 2px solid #1DB954;" %>
         <% else %>
        <div class="d-flex align-items-center justify-content-center mx-2 position-relative rounded-circle" style="width: 60px; height: 60px; border: 2px solid #1DB954;">
-  <%= image_tag 'default_avatar.jpg', class: "avatar", style: "width: 60px; height: 60px; border: 2px solid #1DB954;" %>
 
   <span class="text-uppercase font-weight-bold position-absolute" style="font-size: 24px; color: #1DB954; top: 50%; left: 50%; transform: translate(-50%, -50%);">
     <%= dj.name[0] %><%= dj.name.split.last[0] %>
