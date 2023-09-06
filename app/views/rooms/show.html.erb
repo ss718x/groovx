@@ -32,7 +32,7 @@
     </div>
 
     <!-- chat and chat member list -->
-    <div class="chat-container d-flex border" style="height: 100%; width: 100%;">
+    <div class="chat-container d-flex border" style="height: 100%;">
       <div class="chatbox col-9 border" style="height: 100%">
         <div class="messages-container" data-controller="room-subscription" data-room-subscription-room-id-value="<%= @room.id %>">
           <div class="messages" data-room-subscription-target="messages">
@@ -57,7 +57,7 @@
           <% end %>
         </div>
       </div>
-      <div class="container chatlist">
+      <div class="container chatlist" style="width: 100px; margin: 0;">
         <% @room.rooms_users.each do |room_user| %>
           <ul style="list-style-type: none; padding-left: 0;">
             <li><%= room_user.user.name.split.first %></li>
