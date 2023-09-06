@@ -46,6 +46,7 @@ class RoomsController < ApplicationController
   end
 
   def my_rooms
+    @rooms = current_user.rooms
   end
 
   private

@@ -2,18 +2,17 @@
 
 <% if current_user.rooms.any? %>
   <div class="row m-5">
-    <% current_user.rooms.each do |room| %>
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title"><%= room.name %></h5>
-            <p class="card-text">Max DJs: <%= room.max_djs %></p>
-            <p class="card-text">Genre: <%= room.genre %></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <% @rooms.each do |room| %>
+     <div class="col-md-3">
+      <%= render 'shared/card',
+          title: room.name,
+          max_djs: room.max_djs,
+          description: room.description,
+          image: room.image_url,
+          link: room_path(room.id) %>
+    </div>
+  <% end %>
+</div>
 <% else %>
   <p class="text-center my-5">You haven't created any room yet.</p>
   <p class="text-center my-5"><a href="<%= new_room_path %>">Create a new room</a></p>
