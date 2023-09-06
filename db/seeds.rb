@@ -25,8 +25,8 @@ file8 = URI.open("https://images.unsplash.com/photo-1495924979005-79104481a52f")
 file9 = URI.open("https://images.unsplash.com/photo-1521038199265-bc482db0f923")
 file10 = URI.open("https://images.unsplash.com/photo-1563351672-62b74891a28a")
 
-emails = ['user1@grvx.com', 'user2@grvx.com', 'user3@grvx.com', 'user4@grvx.com', 'user5@grvx.com',
-          'user6@grvx.com', 'user7@grvx.com', 'user8@grvx.com', 'user9@grvx.com', 'user10@grvx.com']
+emails = ['user1@grvx.fm', 'user2@grvx.fm', 'user3@grvx.fm', 'user4@grvx.fm', 'user5@grvx.fm',
+          'user6@grvx.fm', 'user7@grvx.fm', 'user8@grvx.fm', 'user9@grvx.fm', 'user10@grvx.fm']
 
 names = ["Sebastian", "Steve", "Mano", "Vickie", "Ethan", "Jenny", "Jay", "Kelly", "Maria", "Kahn"]
 
