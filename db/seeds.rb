@@ -61,12 +61,12 @@ users = User.all
 # later they will be generated dynamically via Spotify
 
 album_covers = [
-  "https://i.ibb.co/PtBGgYX/clash.pnga",
+  "https://i.ibb.co/fGXJfSV/br.png",
   "https://i.ibb.co/cbqGv03/floyd.png",
-  "https://i.ibb.co/2chw0p7/joy-division.png",
+  "https://i.ibb.co/yWsBnbF/goth2.jpg",
   "https://i.ibb.co/CVYWsVw/judas-priest.png",
   "https://i.ibb.co/Y7kDrtq/leadbelly.jpg",
-  "https://i.ibb.co/bvpHtxv/nas.png",
+  "https://i.ibb.co/khscrrJ/nyc.jpg",
   "https://i.ibb.co/b5Y3KG2/nevermind.png",
   "https://i.ibb.co/JKmHb0n/thelonious.png"
 ]
