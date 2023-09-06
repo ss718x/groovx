@@ -14,21 +14,21 @@ RoomsUser.destroy_all
 Message.destroy_all
 puts "Everything destroyed"
 
-file1 = URI.open("https://images.unsplash.com/photo-1524638431109-93d95c968f03")
-file2 = URI.open("https://images.unsplash.com/photo-1633332755192-727a05c4013d")
-file3 = URI.open("https://images.unsplash.com/photo-1438761681033-6461ffad8d80")
-file4 = URI.open("https://images.unsplash.com/photo-1645378999488-63138abdecd2")
+file1 = URI.open("https://i.ibb.co/GdMVrVd/hs.jpg")
+file2 = URI.open("https://i.ibb.co/H2XR3Hz/steve.jpg")
+file3 = URI.open("https://i.ibb.co/q9BR7TC/m.jpg")
+file4 = URI.open("https://i.ibb.co/2SQ7VpJ/Vickie.png")
 file5 = URI.open("https://images.unsplash.com/photo-1645378999496-33c8c2afe38d")
 file6 = URI.open("https://images.unsplash.com/photo-1486486704382-8ee6f7754a45")
 file7 = URI.open("https://images.unsplash.com/photo-1645378999496-33c8c2afe38d")
-file8 = URI.open("https://images.unsplash.com/photo-1486486704382-8ee6f7754a45")
+file8 = URI.open("https://images.unsplash.com/photo-1495924979005-79104481a52f")
 file9 = URI.open("https://images.unsplash.com/photo-1521038199265-bc482db0f923")
 file10 = URI.open("https://images.unsplash.com/photo-1563351672-62b74891a28a")
 
-emails = ['user1@me.com', 'user2@me.com', 'user3@me.com', 'user4@me.com', 'user5@me.com',
-          'user6@me.com', 'user7@me.com', 'user8@me.com', 'user9@me.com', 'user10@me.com']
+emails = ['user1@grvx.com', 'user2@grvx.com', 'user3@grvx.com', 'user4@grvx.com', 'user5@grvx.com',
+          'user6@grvx.com', 'user7@grvx.com', 'user8@grvx.com', 'user9@grvx.com', 'user10@grvx.com']
 
-names = ["Denisa", "Steve", "Amber", "Ryan", "Ethan", "Jenny", "Chloe", "Kelly", "Maria", "Sophie"]
+names = ["Sebastian", "Steve", "Mano", "Vickie", "Ethan", "Jenny", "Jay", "Kelly", "Maria", "Kahn"]
 
 files = [file1, file2, file3, file4, file5, file6, file7, file8, file9, file10]
 
