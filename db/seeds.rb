@@ -73,7 +73,7 @@ descriptions = [
     description: descriptions[i],
     max_djs: rand(1..10),
     image_url: album_covers[i],
-    user: user
+    user_id: user.id
   )
   other_users = users.to_a - [user]
   room.djs << other_users.sample(rand(1..5))
