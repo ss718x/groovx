@@ -22,6 +22,8 @@
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  margin: 1px;
+  border-radius: 5px;
 }
 
 .playlist-container::-webkit-scrollbar {
@@ -51,6 +53,7 @@
   padding: 10px;
   width: 100%;
   text-align: center;
+  background-color: #191414;
 }
 
 .tab.active {

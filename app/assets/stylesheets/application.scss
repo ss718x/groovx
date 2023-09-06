@@ -15,6 +15,7 @@ body {
   background-color: #191414;
   color: #FFFFFF;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -50,7 +51,7 @@ body {
 }
 
 .card-body {
-  background-color: #191414;
+  background-color: #000000;
   color: #FFFFFF;
   height: 150px;
   overflow: hidden
@@ -168,15 +169,25 @@ body {
 .right-panel {
   display: flex;
   flex-direction: column;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .player-and-djs-container {
   flex-shrink: 0;  /* This ensures it doesn't shrink beyond its content */
+  margin: 0px;
+}
+
+.player {
+  margin-top: 3px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .chat-container {
   flex-grow: 1;    /* This ensures it takes up the remaining space */
   overflow-y: hidden; /* Allows scrolling within the chat if content overflows */
+  margin: 1px;
 }
 
 .chatlist {
@@ -188,6 +199,7 @@ body {
 .dj-queue {
   padding: 40px;
   padding-left: 0px;
+  margin-top: 2px;
 }
 
 .avatar {
@@ -198,12 +210,11 @@ body {
 
 /* Style for the chatlist container */
 .container.chatlist {
-  width: 275px; /* Adjust the width as needed */
-  margin: 0;
+  width: 265px; /* Adjust the width as needed */
+  margin: 2px;
   padding: 10px;
   background-color: #000000; /* Background color */
-  border: 1px solid #ddd; /* Border color */
-  border-radius: 5px; /* Rounded corners */
+  border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
 }
 
@@ -230,4 +241,24 @@ body {
 .container.chatlist li:hover {
   background-color: #1DB954; /* Background color on hover */
   cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+.messages-container {
+  // margin: 0;
+  padding-left: 5px;
+  background-color: #000000; /* Background color */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.player-and-djs-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.player-and-djs-container .player {
+  height: 60%;
 }

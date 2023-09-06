@@ -1,7 +1,7 @@
-<div class="container-fluid d-flex m-0 p-0" style="height: calc(100vh - 58px);">
+<div class="container-fluid d-flex m-0 p-0" style="height: calc(100vh - 70px);">
 
   <!-- playlist container -->
-  <div class="playlist-container" style="width: 400px;">
+  <div class="playlist-container" style="width: 400px; background-color: #000000; border-radius: 5px;">
     <div>
       <ul class="tabs">
         <li data-tab-target="#queue" class="active tab">Queue</li>
@@ -26,14 +26,14 @@
   <!-- right panel container -->
   <div class="right-panel d-flex flex-grow flex-column" style="width: 100%;">
     <!-- player and list of currently active djs -->
-    <div class="player-and-djs-container border d-flex flex-column justify-content-between" style="height: 250px; width: 100%;">
-      <div class="player p-1" style="height: 60%;">player</div>
+    <div class="player-and-djs-container">
+      <div class="player p-1">player</div>
       <%= render "room/djqueue", djs: @djs, room: @room %>
     </div>
 
     <!-- chat and chat member list -->
-    <div class="chat-container d-flex border" style="height: 100%;">
-      <div class="chatbox col-9 border" style="height: 100%">
+    <div class="chat-container d-flex" style="height: 100%;">
+      <div class="chatbox col-9" style="height: 100%">
         <div class="messages-container" data-controller="room-subscription" data-room-subscription-room-id-value="<%= @room.id %>">
           <div class="messages" data-room-subscription-target="messages">
             <!-- messages field -->
