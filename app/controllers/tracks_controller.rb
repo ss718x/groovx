@@ -25,6 +25,8 @@ class TracksController < ApplicationController
     QueuedSong.create(user: @user, room_id: 266, track_id: @track_id)
     puts "Track added to queue: #{@track_id}"
 
+    # add addSongToQueue action that will generate queued songs
+
     render json: { message: 'Track added to queue' }
   end
 end
