@@ -8,9 +8,17 @@
         <li data-tab-target="#search" class="tab">Search</li>
       </ul>
     </div>
-    <div data-controller="search" class="tab-content">
+    <div data-controller="search queue" class="tab-content">
       <div id="queue" data-tab-content class="active">
-        <div data-search-target=""></div> <!-- queued tracks go here -->
+        <div data-search-target="">
+          <p>Songs in the queue:</p>
+            <% @queued_songs.each do |song| %>
+            <ul data-queue-target="list">
+              <li><%= "#{song.name} by #{song.artists[0].name}" %></li>
+            </ul>
+            <% end %>
+        </div>
+
       </div>
       <div id="search" data-tab-content>
         <div class="search-bar">
@@ -19,7 +27,6 @@
             <%= text_field_tag :query, nil, placeholder: "search and add songs to your queue", class: "search-input", style: "width: 200px; color: #1DB954;" %>
             <%= hidden_field_tag :room_id, @room.id %>
           <% end %>
-          <i class="fas fa-times-circle delete-icon"></i>
         </div>
         <div data-search-target="tracks"></div>
       </div>
@@ -49,7 +56,10 @@
 
 
 
-      <div class="player p-1">player</div>
+    <div class="player p-1">
+      <div data-controller="spotify-player" id="spotify-player"></div>
+    </div>
+
       <%= render "room/djqueue", djs: @djs, room: @room %>
     </div>
 
@@ -89,3 +99,5 @@
     </div>
   </div>
 </div>
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>

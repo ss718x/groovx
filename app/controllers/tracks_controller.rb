@@ -20,11 +20,20 @@ class TracksController < ApplicationController
   def add_track_to_queue
     @track_id = params[:track_id]
     @user = current_user
-    @room_id = params[:roomId]
 
-    QueuedSong.create(user: @user, room_id: 266, track_id: @track_id)
+    QueuedSong.create(user: @user, track_id: @track_id)
     puts "Track added to queue: #{@track_id}"
 
+    # @queue_array = []
+    # @queue_array << queued_song
+
     render json: { message: 'Track added to queue' }
+  end
+
+  def queued_songs
+    @queued_songs = QueuedSong.all.map do |queue|
+      RSpotify::Track.find(queue.track_id)
+    end
+    render json: @queued_songs
   end
 end

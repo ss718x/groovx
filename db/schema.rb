@@ -60,11 +60,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_051330) do
 
   create_table "queued_songs", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "room_id", null: false
     t.string "track_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_queued_songs_on_room_id"
+    t.bigint "room_id"
     t.index ["user_id"], name: "index_queued_songs_on_user_id"
   end
 
@@ -110,7 +109,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_051330) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "queued_songs", "rooms"
   add_foreign_key "queued_songs", "users"
   add_foreign_key "rooms", "users"
 end
