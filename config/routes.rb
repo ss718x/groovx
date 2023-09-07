@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :tracks, only: [:index] do
+    post 'add_track_to_queue', on: :collection
     collection do
       post :search
     end

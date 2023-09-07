@@ -2,7 +2,20 @@
   <% if tracks %>
     <% tracks.each do |track| %>
       <div class="track">
-        <iframe class="spotify-player" src="https://open.spotify.com/embed/track/<%= track.id %>" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="spotify-player"
+                src="https://open.spotify.com/embed/track/<%= track.id %>"
+                width="300"
+                height="80"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media">
+        </iframe>
+        <button class="btn add-to-queue-button"
+                style="width: 95%; margin-bottom: 10px; margin-top: 0;"
+                data-controller="queue"
+                data-action="click->queue#addToQueue"
+                data-track-id="<%= track.id %>"
+        >queue this track ⬆️</button>
       </div>
     <% end %>
   <% end %>

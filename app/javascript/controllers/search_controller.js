@@ -20,9 +20,12 @@ export default class extends Controller {
         if (data.tracks) {
           this.tracksTarget.innerHTML = data.tracks
         }
+        console.log("data:", data)
         // this.formTarget.outerHTML = data.form
       })
   }
+
+
 }
 
 // tabs
