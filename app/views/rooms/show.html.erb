@@ -16,7 +16,7 @@
         <div class="search-bar">
           <i class="fas fa-search search-icon"></i>
           <%= form_tag search_tracks_path, method: :post, data: { search_target: "form", action: "submit->search#search" }  do %>
-            <%= text_field_tag :query, nil, placeholder: "search and add songs to your queue", style: "width: 400px" %>
+            <%= text_field_tag :query, nil, placeholder: "search and add songs to your queue", class: "search-input", style: "width: 200px; color: #1DB954;" %>
             <%= hidden_field_tag :room_id, @room.id %>
           <% end %>
           <i class="fas fa-times-circle delete-icon"></i>
