@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :created_rooms, class_name: 'Room', foreign_key: 'user_id'
   has_one_attached :avatar
   attr_accessor :genre
+  has_many :queued_songs, dependent: :destroy
 end

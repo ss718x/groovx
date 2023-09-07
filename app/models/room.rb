@@ -4,4 +4,5 @@ class Room < ApplicationRecord
   has_many :rooms_users
   has_many :djs, through: :rooms_users, source: :user
   has_many :messages, dependent: :destroy
+  has_many :queued_songs, dependent: :destroy
 end

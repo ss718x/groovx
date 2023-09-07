@@ -16,6 +16,7 @@
         <div>
           <%= form_tag search_tracks_path, method: :post, data: { search_target: "form", action: "submit->search#search" }  do %>
             <%= text_field_tag :query, nil, placeholder: "search and add songs to your queue", style: "width: 400px" %>
+            <%= hidden_field_tag :room_id, @room.id %>
           <% end %>
         </div>
         <div data-search-target="tracks"></div>
@@ -27,6 +28,25 @@
   <div class="right-panel d-flex flex-grow flex-column" style="width: 100%;">
     <!-- player and list of currently active djs -->
     <div class="player-and-djs-container">
+
+
+ <div data-controller="search" class="tab-content">
+      <div id="queue" data-tab-content class="active">
+        <div data-search-target=""></div> <!-- queued tracks go here -->
+      </div>
+      <div id="search" data-tab-content>
+        <div>
+          <%= form_tag search_tracks_path, method: :post, data: { search_target: "form", action: "submit->search#search" }  do %>
+            <%= text_field_tag :query, nil, placeholder: "search and add songs to your queue", style: "width: 400px" %>
+            <%= hidden_field_tag :room_id, @room.id %>
+          <% end %>
+        </div>
+        <div data-search-target="tracks"></div>
+      </div>
+    </div>
+
+
+
       <div class="player p-1">player</div>
       <%= render "room/djqueue", djs: @djs, room: @room %>
     </div>
