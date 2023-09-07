@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get '/callback', to: 'tracks#callback'
   get '/my_rooms', to: 'rooms#my_rooms', as: 'my_rooms'
 
-  # post '/room/:room_id/rooms_user', to: 'rooms_user#create', as: "add"
+  get '/queued_songs', to: 'tracks#queued_songs'
 end

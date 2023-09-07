@@ -10,6 +10,10 @@ class RoomsController < ApplicationController
     @rooms_user = RoomsUser.new
     @messages = @room.messages.order(created_at: :asc)
     @message = Message.new
+    @queued_songs = QueuedSong.all.map do |queue|
+      RSpotify::Track.find(queue.track_id)
+    end
+    puts "Songs: #{@queued_songs}"
   end
 
   def new
