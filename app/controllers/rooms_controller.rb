@@ -19,6 +19,10 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     @room.user_id = current_user.id
+
+    random_number = rand(1000) # Generate a random number between 0 and 999
+    @room.image_url = "https://source.unsplash.com/random/?music&random=#{random_number}"
+
     if @room.save
       redirect_to room_path(@room), notice: 'Room was successfully created.'
     else

@@ -15,6 +15,7 @@ body {
   background-color: #191414;
   color: #FFFFFF;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -50,7 +51,7 @@ body {
 }
 
 .card-body {
-  background-color: #191414;
+  background-color: #000000;
   color: #FFFFFF;
   height: 150px;
   overflow: hidden
@@ -168,15 +169,25 @@ body {
 .right-panel {
   display: flex;
   flex-direction: column;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .player-and-djs-container {
   flex-shrink: 0;  /* This ensures it doesn't shrink beyond its content */
+  margin: 0px;
+}
+
+.player {
+  margin-top: 3px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .chat-container {
   flex-grow: 1;    /* This ensures it takes up the remaining space */
   overflow-y: hidden; /* Allows scrolling within the chat if content overflows */
+  margin: 1px;
 }
 
 .chatlist {
@@ -188,10 +199,66 @@ body {
 .dj-queue {
   padding: 40px;
   padding-left: 0px;
+  margin-top: 2px;
 }
 
 .avatar {
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover;  /* Ensures the image isn't stretched */
   overflow: hidden;   /* Ensures any part of the image outside the circle is hidden */
+}
+
+/* Style for the chatlist container */
+.container.chatlist {
+  width: 265px; /* Adjust the width as needed */
+  margin: 2px;
+  padding: 10px;
+  background-color: #000000; /* Background color */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+/* Style for the list of chatters */
+.container.chatlist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container.chatlist li {
+  font-size: 16px; /* Adjust the font size as needed */
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 0px; /* Spacing between list items */
+  color: #ffffff; /* Text color */
+  display: inline-block;
+}
+
+.container.chatlist li:last-child {
+  margin-bottom: 0; /* Remove spacing after the last item */
+}
+
+/* Hover effect for list items (optional) */
+.container.chatlist li:hover {
+  background-color: #1DB954; /* Background color on hover */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+.messages-container {
+  // margin: 0;
+  padding-left: 5px;
+  background-color: #000000; /* Background color */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+.player-and-djs-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.player-and-djs-container .player {
+  height: 60%;
 }

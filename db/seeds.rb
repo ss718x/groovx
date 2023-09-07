@@ -18,17 +18,18 @@ file1 = URI.open("https://i.ibb.co/GdMVrVd/hs.jpg")
 file2 = URI.open("https://i.ibb.co/H2XR3Hz/steve.jpg")
 file3 = URI.open("https://i.ibb.co/q9BR7TC/m.jpg")
 file4 = URI.open("https://i.ibb.co/2SQ7VpJ/Vickie.png")
-file5 = URI.open("https://images.unsplash.com/photo-1573048104623-271ad5635bff")
+file5 = URI.open("https://i.ibb.co/88Pf2Mh/lalo.jpg")
 file6 = URI.open("https://images.unsplash.com/photo-1486486704382-8ee6f7754a45")
 file7 = URI.open("https://images.unsplash.com/photo-1645378999496-33c8c2afe38d")
 file8 = URI.open("https://images.unsplash.com/photo-1495924979005-79104481a52f")
 file9 = URI.open("https://images.unsplash.com/photo-1521038199265-bc482db0f923")
 file10 = URI.open("https://images.unsplash.com/photo-1563351672-62b74891a28a")
 
+
 emails = ['user1@grvx.fm', 'user2@grvx.fm', 'user3@grvx.fm', 'user4@grvx.fm', 'user5@grvx.fm',
           'user6@grvx.fm', 'user7@grvx.fm', 'user8@grvx.fm', 'user9@grvx.fm', 'user10@grvx.fm']
 
-names = ["Sebastian", "Steve", "Mano", "Vickie", "Ethan", "Jenny", "Jay", "Kelly", "Maria", "Kahn"]
+names = ["Sebastian", "Steve", "Mano", "Vickie", "Lalo", "Jenny", "Jay", "Kelly", "Maria", "Kahn"]
 
 files = [file1, file2, file3, file4, file5, file6, file7, file8, file9, file10]
 
@@ -61,12 +62,12 @@ users = User.all
 # later they will be generated dynamically via Spotify
 
 album_covers = [
-  "https://i.ibb.co/PtBGgYX/clash.pnga",
+  "https://i.ibb.co/fGXJfSV/br.png",
   "https://i.ibb.co/cbqGv03/floyd.png",
-  "https://i.ibb.co/2chw0p7/joy-division.png",
+  "https://i.ibb.co/yWsBnbF/goth2.jpg",
   "https://i.ibb.co/CVYWsVw/judas-priest.png",
   "https://i.ibb.co/Y7kDrtq/leadbelly.jpg",
-  "https://i.ibb.co/bvpHtxv/nas.png",
+  "https://i.ibb.co/khscrrJ/nyc.jpg",
   "https://i.ibb.co/b5Y3KG2/nevermind.png",
   "https://i.ibb.co/JKmHb0n/thelonious.png"
 ]
