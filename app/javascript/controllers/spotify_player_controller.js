@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="spotify-player"
 export default class extends Controller {
   connect() {
-    const token = 'BQDs5HnnrO29Ch8bPXXdGVupOde15WE4jlomWDDJOQWdbBrlVb0qDrJv5_bu6rCQbkodSPft0u8ZdlzcVA99Z_SFLNgGGdo-OX4AMXJesjE_o2JX-xgT_x2J6VuftMNLWB10SXG-w4bPoZGVpZT03OkEEXpmCqtnIimGfGNVuAzehZLdzHqEORox3Pe9qoivdH9J9xYyHjuQ';
+    const token = 'BQBPtsyi7XLbzGli5wtPqhzcUwG4q75SPDtOD6wzjuOg-xMu5V4Gg9nv7hTerypX4JfMJ0tfzyX69VG5yQmGTfkd-K39xN4QpfGOhFITU8MLctpVIXFzY2skeVtaG9mgWUSWbOQQOEfWhIXuRrwsTVQVeJecxqEETC2pvaV80ceD5ZE08PMQHvVo_ol-NCvqSagCv6QrxTdT';
     const player = new Spotify.Player({
       name: 'Groovx Player',
       getOAuthToken: cb => { cb(token); },
