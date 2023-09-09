@@ -22,9 +22,13 @@
       </div>
       <div id="search" data-tab-content>
         <div class="search-bar">
-          <i class="fas fa-search search-icon"></i>
+          <i class="fas fa-search"></i>
           <%= form_tag search_tracks_path, method: :post, data: { search_target: "form", action: "submit->search#search" }  do %>
+<<<<<<< HEAD
             <%= text_field_tag :query, nil, placeholder: "search and add songs to your queue", class: "search-input", style: "width: 200px; color: #1DB954;" %>
+=======
+            <%= text_field_tag :query, nil, placeholder: "add songs to your queue", style: "border-radius: 10px; width: 275px;" %>
+>>>>>>> 765122894dc28c4ba2795a77c4974e8ce6ae7190
             <%= hidden_field_tag :room_id, @room.id %>
           <% end %>
         </div>
