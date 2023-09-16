@@ -58,8 +58,6 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "kredis"
-gem 'cloudinary'
-gem 'open-uri'
 
 
 group :development, :test do
